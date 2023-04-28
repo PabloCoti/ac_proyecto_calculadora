@@ -37,8 +37,8 @@ g_mult:                   ;g_mult
 ; ----------------------------------------- ;
 ; imprime el resultado almacenado en la pila y el buffer, todo fue exitoso, se guardara 1 en ecx antes de llamar a esta subrutina
 display_result:
-	cmp         ecx,1                   ; revisa si hubo un error durante las operacions
-    jne         .error                  ; ecx != 1 -> error durante la ejecucion
+	cmp         ecx,1                               ; revisa si hubo un error durante las operacions
+    jne         .error                              ; ecx != 1 -> error durante la ejecucion
     .no_error:                                      ; no hubieron errores
         dec         ecx                             ; regresamos un valor en el buffer
     	mov         eax, [instructions +ecx*4]      ; guardamos en eax el ultimo valor almacenado, dir en memoria inst + ecx * 4

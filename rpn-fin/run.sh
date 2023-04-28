@@ -1,5 +1,5 @@
 echo "DELETE FILES"
-rm rpn2.exe rpn2.o result.txt
+rm -rf rpn2.exe rpn2.o result.txt
 echo "COMPILING rpn2.ASM.."
 nasm -f elf rpn2.asm
 echo "CREATING OBJECT..."
